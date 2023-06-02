@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VOC Analytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1 id="cx-heading" class="slide-in">CX-Analytics</h1>
+    <div class="container">
+        <form method="POST" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <div class="form-item">
+                <label for="file" class="file-label">Choose file</label>
+                {{ form.file(class="file-input", id="file") }}
+            </div>
+            <div class="form-item">
+                {{ form.submit(class="submit-button") }}
+            </div>
+        </form>
+    </div>
+</body>
+</html>
